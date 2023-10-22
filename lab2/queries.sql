@@ -52,6 +52,7 @@ HAVING COUNT(*) > 8
 SELECT productid, orderid, SUM(quantity) AS total_quantity
 FROM orderhist
 GROUP BY productid, orderid
+WITH ROLLUP
 ORDER BY productid, orderid
 
 SELECT NULL, NULL, SUM(quantity) AS total_quantity
