@@ -66,7 +66,8 @@ GROUP BY
     CONCAT(Employees.FirstName, ' ', Employees.LastName),
     YEAR(Orders.OrderDate),
     MONTH(Orders.OrderDate)
-WITH ROLLUP
+-- WITH ROLLUP
+ORDER BY 1, 2, 3, 4
 
 -- 4.2
 SELECT
